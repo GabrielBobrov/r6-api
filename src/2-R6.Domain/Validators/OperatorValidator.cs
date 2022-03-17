@@ -27,15 +27,11 @@ namespace R6.Domain.Validators{
 
             RuleFor(x => x.Dificult)
                 .NotNull()
-                .WithMessage("É necessário informar a dificuldade do operador.")
-                .GreaterThan(0)
-                .WithMessage("A dificuldade do operador deve ser maior que 0.");
+                .WithMessage("É necessário informar a dificuldade do operador.");
 
             RuleFor(x => x.Speed)
                 .NotNull()
-                .WithMessage("É necessário informar a dificuldade do operador.")
-                .GreaterThan(0)
-                .WithMessage("A dificuldade do operador deve ser maior que 0.");
+                .WithMessage("É necessário informar a dificuldade do operador.");
 
             RuleFor(x => x.Armor)
                 .NotNull()

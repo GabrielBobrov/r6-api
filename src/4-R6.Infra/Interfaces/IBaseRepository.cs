@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System;
 
-namespace R6.Infra.Interfaces{
+namespace R6.Infra.Interfaces
+{
     public interface IBaseRepository<T> where T : Base{
         Task<T> CreateAsync(T obj);
         Task<T> UpdateAsync(T obj);

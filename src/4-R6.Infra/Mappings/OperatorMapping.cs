@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace R6.Infra.Mappings
 {
-    public class OperatorMap : IEntityTypeConfiguration<Operator>
+    public class OperatorMapping : IEntityTypeConfiguration<Operator>
     {
         public void Configure(EntityTypeBuilder<Operator> builder)
         {
@@ -24,15 +24,15 @@ namespace R6.Infra.Mappings
             
             builder.Property(x => x.Armor)
                 .IsRequired()
-                .HasColumnName("Armor")
-                .HasConversion<string>();
+                .HasColumnName("Armor");
 
             builder.Property(x => x.Dificult)
                 .IsRequired()
-                .HasMaxLength(180)
-                .HasColumnName("Dificult")
-                .HasColumnType("int");
+                .HasColumnName("Dificult");
 
+            builder.Property(x => x.Speed)
+                .IsRequired()
+                .HasColumnName("Speed");
         }
     }
 }

@@ -11,6 +11,7 @@
           "Microsoft.EntityFrameworkCore": "6.0.3",
           "Microsoft.EntityFrameworkCore.Design": "6.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.3",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.3",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.1",
           "R6.Core": "1.0.0",
           "R6.Domain": "1.0.0"
@@ -201,6 +202,31 @@
           }
         }
       },
+      "Npgsql/6.0.3": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.dll": {
+            "assemblyVersion": "6.0.3.0",
+            "fileVersion": "6.0.3.0"
+          }
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/6.0.3": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.3",
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.3",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.3",
+          "Npgsql": "6.0.3"
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "assemblyVersion": "6.0.3.0",
+            "fileVersion": "6.0.3.0"
+          }
+        }
+      },
       "Pomelo.EntityFrameworkCore.MySql/6.0.1": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "6.0.3",
@@ -372,6 +398,20 @@
       "sha512": "sha512-JVokQTUNN3WHAu9Vw8ieeq1dXTFokJiig5P0VJ4f439UxRrsPo6SaVWC8Zdm6mkPeQFhZ0/9afdWa02EY/1j/w==",
       "path": "mysqlconnector/2.1.2",
       "hashPath": "mysqlconnector.2.1.2.nupkg.sha512"
+    },
+    "Npgsql/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yt/3XFRhHsJ01a4+qHM9+0mtitQ3DY2wJLyGP9vtvZa1cB1nSAw762GJGdSX3Bbc7wZKzeo4dc4drD3yvQe7gA==",
+      "path": "npgsql/6.0.3",
+      "hashPath": "npgsql.6.0.3.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/6.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4FJ4ww7EdMKlg0Bdug783V5+OVTczu7HF1ra7FOWin/3w1v/EplVGXUQlW/4JPVloe6nnsnvmfzKCY4JiHspHw==",
+      "path": "npgsql.entityframeworkcore.postgresql/6.0.3",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.6.0.3.nupkg.sha512"
     },
     "Pomelo.EntityFrameworkCore.MySql/6.0.1": {
       "type": "package",

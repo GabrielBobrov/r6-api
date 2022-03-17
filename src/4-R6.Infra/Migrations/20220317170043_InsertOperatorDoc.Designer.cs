@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+using R6.Core.Enums;
 using R6.Infra.Context;
 
 #nullable disable
@@ -11,15 +13,20 @@ using R6.Infra.Context;
 namespace R6.Infra.Migrations
 {
     [DbContext(typeof(R6Context))]
-    [Migration("20220317040203_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20220317170043_InsertOperatorDoc")]
+    partial class InsertOperatorDoc
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.3")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
+
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "armor_type", new[] { "light", "medium", "heavy" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "dificult_type", new[] { "easy", "medium", "hard" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "speed_type", new[] { "slow", "medium", "fast" });
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("R6.Domain.Entities.Operator", b =>
                 {
@@ -28,14 +35,14 @@ namespace R6.Infra.Migrations
                         .HasColumnType("BIGINT")
                         .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Armor")
-                        .IsRequired()
-                        .HasColumnType("longtext")
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<ArmorType>("Armor")
+                        .HasColumnType("armor_type")
                         .HasColumnName("Armor");
 
-                    b.Property<int>("Dificult")
-                        .HasMaxLength(180)
-                        .HasColumnType("int")
+                    b.Property<DificultType>("Dificult")
+                        .HasColumnType("dificult_type")
                         .HasColumnName("Dificult");
 
                     b.Property<string>("Name")
@@ -44,8 +51,9 @@ namespace R6.Infra.Migrations
                         .HasColumnType("VARCHAR(80)")
                         .HasColumnName("Name");
 
-                    b.Property<int>("Speed")
-                        .HasColumnType("int");
+                    b.Property<SpeedType>("Speed")
+                        .HasColumnType("speed_type")
+                        .HasColumnName("Speed");
 
                     b.HasKey("Id");
 

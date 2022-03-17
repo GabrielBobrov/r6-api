@@ -8,15 +8,15 @@ namespace R6.Domain.Entities
 
         //Propriedades
         public string Name { get; private set; }
-        public int Dificult { get; private set; }
-        public int Speed { get; private set; }
+        public DificultType Dificult { get; private set; }
+        public SpeedType Speed { get; private set; }
         public ArmorType Armor { get; private set; }
 
 
         //EF
         protected Operator(){}
 
-        public Operator(string name, int dificult, int speed, ArmorType armor)
+        public Operator(string name, DificultType dificult, SpeedType speed, ArmorType armor)
         {
             Name = name;
             Dificult = dificult;
@@ -29,18 +29,18 @@ namespace R6.Domain.Entities
 
 
         //Comportamentos
-        public void SetDificult(string name){
+        public void SetName(string name){
             Name = name;
             Validate();
         }
 
-        public void SetSpeed(int speed){
+        public void SetSpeed(SpeedType speed){
             Speed = speed;
             Validate();
         }
 
-        public void SetEmail(int email){
-            Dificult = email;
+        public void SetDificult(DificultType dificult){
+            Dificult = dificult;
             Validate();
         }
 
