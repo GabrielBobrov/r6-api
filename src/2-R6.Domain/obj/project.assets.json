@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "FluentValidation/10.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {}
+        }
+      },
+      "R6.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/R6.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/R6.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FluentValidation/10.4.0": {
+      "sha512": "rVI1b5L3pq3layrRKIo3N7AT3PWey8ocPZhf6zeHYf6LBBvnP1KzW3bm7KmeazOWW8m1KXMD+shfviIcKSgQ0g==",
+      "type": "package",
+      "path": "fluentvalidation/10.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.10.4.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "R6.Core/1.0.0": {
+      "type": "project",
+      "path": "../5-R6.Core/R6.Core.csproj",
+      "msbuildProject": "../5-R6.Core/R6.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "R6.Core >= 1.0.0",
+      "fluentvalidation >= 10.4.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/gabrielgomesbobrovlopes/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj",
+      "projectName": "R6.Domain",
+      "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj",
+      "packagesPath": "/Users/gabrielgomesbobrovlopes/.nuget/packages/",
+      "outputPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/gabrielgomesbobrovlopes/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj": {
+              "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "fluentvalidation": {
+            "target": "Package",
+            "version": "[10.4.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

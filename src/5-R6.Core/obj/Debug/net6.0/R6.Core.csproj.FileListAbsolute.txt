@@ -1,0 +1,12 @@
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/bin/Debug/net6.0/R6.Core.deps.json
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/bin/Debug/net6.0/R6.Core.dll
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/bin/Debug/net6.0/ref/R6.Core.dll
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/bin/Debug/net6.0/R6.Core.pdb
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/Debug/net6.0/R6.Core.csproj.AssemblyReference.cache
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/Debug/net6.0/R6.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/Debug/net6.0/R6.Core.AssemblyInfoInputs.cache
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/Debug/net6.0/R6.Core.AssemblyInfo.cs
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/Debug/net6.0/R6.Core.csproj.CoreCompileInputs.cache
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/Debug/net6.0/R6.Core.dll
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/Debug/net6.0/ref/R6.Core.dll
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/Debug/net6.0/R6.Core.pdb
