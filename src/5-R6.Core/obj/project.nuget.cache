@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4Gwh6VwDjuuGkd9wiXL4+LUNW0kaoUghrjd/HyPBHwhH9OtOLq2goz4N/afJ6trOKP8OOiJuka5gwaS8IYKP+w==",
+  "dgSpecHash": "bb0rtsiLZC4xOcjJaQNcpPXguGvfEF+FTdAQvFDs01hr1r98BlZZ6WjJ3wuWsHXmapt7A6Ljm9Fud0TmLiJ77w==",
   "success": true,
   "projectFilePath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/gabrielgomesbobrovlopes/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
+    "/Users/gabrielgomesbobrovlopes/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

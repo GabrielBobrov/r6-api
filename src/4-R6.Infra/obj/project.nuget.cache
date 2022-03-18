@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "OBx+tZK4gV3Cjqmlbb1uTodRVOpcw8VWPGypK78p+/U/UH6coVmUf6BaVeL84qxgML6jd/4wMczxKTmPj0PVrQ==",
+  "dgSpecHash": "TMMvGu/JqsagAkFKsdAg0mS9ImYGSokn82ZWdPGc+Zk3GPNGEu0JO0HRxNq4U9VJKxHa/tO9/Md2xLLSBtk9NA==",
   "success": true,
   "projectFilePath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj",
   "expectedPackageFiles": [
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/fluentvalidation/10.4.0/fluentvalidation.10.4.0.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/gabrielgomesbobrovlopes/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
+    "/Users/gabrielgomesbobrovlopes/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/microsoft.entityframeworkcore/6.0.3/microsoft.entityframeworkcore.6.0.3.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.3/microsoft.entityframeworkcore.abstractions.6.0.3.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.3/microsoft.entityframeworkcore.analyzers.6.0.3.nupkg.sha512",
@@ -21,10 +23,8 @@
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "/Users/gabrielgomesbobrovlopes/.nuget/packages/mysqlconnector/2.1.2/mysqlconnector.2.1.2.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/npgsql/6.0.3/npgsql.6.0.3.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/npgsql.entityframeworkcore.postgresql/6.0.3/npgsql.entityframeworkcore.postgresql.6.0.3.nupkg.sha512",
-    "/Users/gabrielgomesbobrovlopes/.nuget/packages/pomelo.entityframeworkcore.mysql/6.0.1/pomelo.entityframeworkcore.mysql.6.0.1.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/system.diagnostics.diagnosticsource/6.0.0/system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "/Users/gabrielgomesbobrovlopes/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"

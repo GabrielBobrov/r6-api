@@ -13,7 +13,6 @@ namespace R6.Infra.Mappings
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
-                .UseMySqlIdentityColumn()
                 .HasColumnType("BIGINT");
 
             builder.Property( x => x.Name)

@@ -19,10 +19,10 @@ namespace R6.Infra.Context
         public R6Context(DbContextOptions<R6Context> options) : base(options)
         { }
 
-         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuider)
-         {
-             optionsBuider.UseNpgsql("Server=127.0.0.1;Port=5432;Database=r6db;User Id=postgres;Password=gabriel123;Timeout=15;");
-         }
+          protected override void OnConfiguring(DbContextOptionsBuilder optionsBuider)
+          {
+              optionsBuider.UseNpgsql("Server=127.0.0.1;Port=5432;Database=r6db;User Id=postgres;Password=gabriel123;Timeout=15;");
+          }
 
         public virtual DbSet<Operator> Operators{ get; set; }
 

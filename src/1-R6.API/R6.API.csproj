@@ -8,14 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="automapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="EscNet" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
+
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\5-R6.Core\R6.Core.csproj" />
     <ProjectReference Include="..\4-R6.Infra\R6.Infra.csproj" />
     <ProjectReference Include="..\2-R6.Domain\R6.Domain.csproj" />
-    <ProjectReference Include="..\3-R6.Service\R6.Service.csproj" />
+    <ProjectReference Include="..\3-R6.Services\R6.Services.csproj" />
   </ItemGroup>
 
 </Project>
