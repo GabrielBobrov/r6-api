@@ -22,7 +22,6 @@
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
-/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll

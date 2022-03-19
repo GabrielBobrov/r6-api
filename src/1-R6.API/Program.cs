@@ -73,7 +73,7 @@ builder.Services.AddSwaggerGen();
 #endregion
 
 #region Database
-    builder.Services.AddDbContext<R6Context>(options => options.UseNpgsql(builder.Configuration["ConnectionStrings:R6APIPostgreSQL"]));
+    builder.Services.AddDbContext<R6Context>(options => options.UseNpgsql("ConnectionStrings:R6APIPostgreSQL"));
 #endregion
 
 #region Mediator
