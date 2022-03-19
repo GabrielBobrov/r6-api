@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using MediatR;
 using R6.Core.Communication.Messages.Notifications;
 using R6.API.Messages;
+using R6.Core.Enums;
 
 namespace R6.API.Controllers
 {
@@ -33,10 +34,10 @@ namespace R6.API.Controllers
 
         [HttpGet]
         [Authorize]
-        [Route("get-all")]
-        public async Task<IActionResult> GetAsync()
+        [Route("get-by-speed")]
+        public async Task<IActionResult> GetBySpeedAsync([FromQuery] SpeedType speed)
         {
-            var allOperators = await _operatorService.GetAllAsync();
+            var operators = await _operatorService.GetBySpeedAsync(speed);
 
             if (HasNotifications())
                 return Result();
@@ -45,7 +46,25 @@ namespace R6.API.Controllers
             {
                 Message = ResponseMessages.SuccessMessageGetAllOperators,
                 Success = true,
-                Data = allOperators.Value
+                Data = operators.Value
+            });
+        }
+
+        [HttpGet]
+        [Authorize]
+        [Route("{id}")]
+        public async Task<IActionResult> GetAsync(long id)
+        {
+            var op = await _operatorService.GetAsync(id);
+
+            if (HasNotifications())
+                return Result();
+
+            return Ok(new ResultViewModel
+            {
+                Message = ResponseMessages.SuccessMessageGetOperator,
+                Success = true,
+                Data = op.Value
             });
         }
 
@@ -65,6 +84,24 @@ namespace R6.API.Controllers
                 Message = "Usuário criado com sucesso!",
                 Success = true,
                 Data = operatorCreated.Value
+            });
+        }
+
+        [HttpGet]
+        [Authorize]
+        [Route("get-all")]
+        public async Task<IActionResult> GetAllAsync()
+        {
+            var allOperators = await _operatorService.GetAllAsync();
+
+            if (HasNotifications())
+                return Result();
+
+            return Ok(new ResultViewModel
+            {
+                Message = ResponseMessages.SuccessMessageGetAllOperators,
+                Success = true,
+                Data = allOperators.Value
             });
         }
     }

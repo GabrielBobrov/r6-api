@@ -76,5 +76,24 @@ namespace R6.Services.Services
 
             return new Optional<IList<OperatorDto>>(allOperatorsDto);
         }
+
+        public async Task<Optional<OperatorDto>> GetAsync(long id)
+        {
+            var op = await _operatorRepository.GetAsync(id);
+            var operatorDto = _mapper.Map<OperatorDto>(op);
+
+            return new Optional<OperatorDto>(operatorDto);
+        }
+
+        public async Task<Optional<IList<OperatorDto>>> GetBySpeedAsync(SpeedType speed)
+        {
+            Expression<Func<Operator, bool>> filter = op
+                => op.Speed == speed;
+
+            var operators = await _operatorRepository.SearchAsync(filter);
+            var operatorsDto = _mapper.Map<IList<OperatorDto>>(operators);
+            
+            return new Optional<IList<OperatorDto>>(operatorsDto);
+        }
     }
 }
