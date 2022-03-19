@@ -45,11 +45,14 @@ namespace R6.API.Controllers
             return errorType switch
             {
                 //Conflict
-                DomainNotificationType.UserAlreadyExists
+                DomainNotificationType.OperatorAlreadyExists
                     => 409,
 
                 //Unprocessable Entity
                 DomainNotificationType.UserInvalid
+                    => 422,
+
+                DomainNotificationType.InvalidEnum
                     => 422,
 
                 //Not Found

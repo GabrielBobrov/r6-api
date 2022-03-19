@@ -2,8 +2,9 @@ namespace R6.Core.Enums
 {
     public enum DomainNotificationType
     {
-        UserAlreadyExists,
+        OperatorAlreadyExists,
         UserInvalid,
         UserNotFound,
+        InvalidEnum,
     }
 }

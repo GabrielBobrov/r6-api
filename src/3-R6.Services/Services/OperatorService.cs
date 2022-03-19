@@ -36,6 +36,39 @@ namespace R6.Services.Services
             _mediator = mediator;
         }
 
+        public async Task<Optional<OperatorDto>> CreateAsync(OperatorDto operatorDto)
+        {
+            Expression<Func<Operator, bool>> filter = op 
+                => op.Name.ToLower() == operatorDto.Name.ToLower();
+
+            var operatorExists = await _operatorRepository.GetAsync(filter);
+
+            if (operatorExists != null)
+            {
+                await _mediator.PublishDomainNotificationAsync(new DomainNotification(
+                    ErrorMessages.OperatorAlreadyExists,
+                    DomainNotificationType.OperatorAlreadyExists));
+
+                return new Optional<OperatorDto>();
+            }
+
+            var op = _mapper.Map<Operator>(operatorDto);
+            op.Validate();
+
+            if (!op.IsValid)
+            {
+                await _mediator.PublishDomainNotificationAsync(new DomainNotification(
+                   ErrorMessages.UserInvalid(op.ErrorsToString()),
+                   DomainNotificationType.UserInvalid));
+
+                return new Optional<OperatorDto>();
+            }
+
+            var userCreated = await _operatorRepository.CreateAsync(op);
+
+            return _mapper.Map<OperatorDto>(userCreated);
+        }
+
         public async Task<Optional<IList<OperatorDto>>> GetAllAsync()
         {
             var allOperators = await _operatorRepository.GetAllAsync();

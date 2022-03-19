@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using R6.API.Token;
+using R6.API.ViewModels;
 using R6.Core.Communication.Handlers;
 using R6.Core.Communication.Mediator;
 using R6.Core.Communication.Mediator.Interfaces;
@@ -60,6 +61,7 @@ builder.Services.AddSwaggerGen();
     var autoMapperConfig = new MapperConfiguration(cfg =>
     {
         cfg.CreateMap<Operator, OperatorDto>().ReverseMap();
+        cfg.CreateMap<CreateOperatorViewModel, OperatorDto>().ReverseMap();
     });
 
             builder.Services.AddSingleton(autoMapperConfig.CreateMapper());
