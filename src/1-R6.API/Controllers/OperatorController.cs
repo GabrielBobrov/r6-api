@@ -12,6 +12,7 @@ namespace R6.API.Controllers
 {
 
     [ApiController]
+    [Route("/api/v1/operators")]
     public class OperatorController : BaseController
     {
 
@@ -31,10 +32,10 @@ namespace R6.API.Controllers
 
         [HttpGet]
         [Authorize]
-        [Route("/api/v1/users/get-all")]
+        [Route("get-all")]
         public async Task<IActionResult> GetAsync()
         {
-            var allUsers = await _operatorService.GetAllAsync();
+            var allOperators = await _operatorService.GetAllAsync();
 
             if (HasNotifications())
                 return Result();
@@ -43,7 +44,7 @@ namespace R6.API.Controllers
             {
                 Message = "Usuários encontrados com sucesso!",
                 Success = true,
-                Data = allUsers.Value
+                Data = allOperators.Value
             });
         }
     }
