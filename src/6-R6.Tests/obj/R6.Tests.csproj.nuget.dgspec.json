@@ -4,14 +4,331 @@
     "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/R6.Tests.csproj": {}
   },
   "projects": {
-    "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/R6.Tests.csproj": {
+    "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/R6.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/R6.Tests.csproj",
-        "projectName": "R6.Tests",
-        "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/R6.Tests.csproj",
+        "projectUniqueName": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/R6.API.csproj",
+        "projectName": "R6.API",
+        "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/R6.API.csproj",
         "packagesPath": "/Users/gabrielgomesbobrovlopes/.nuget/packages/",
-        "outputPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/obj/",
+        "outputPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/gabrielgomesbobrovlopes/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/R6.Services.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/R6.Services.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "EscNet": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "automapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj",
+        "projectName": "R6.Domain",
+        "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj",
+        "packagesPath": "/Users/gabrielgomesbobrovlopes/.nuget/packages/",
+        "outputPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/gabrielgomesbobrovlopes/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "fluentvalidation": {
+              "target": "Package",
+              "version": "[10.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/R6.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/R6.Services.csproj",
+        "projectName": "R6.Services",
+        "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/R6.Services.csproj",
+        "packagesPath": "/Users/gabrielgomesbobrovlopes/.nuget/packages/",
+        "outputPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/gabrielgomesbobrovlopes/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "EscNet": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "automapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj",
+        "projectName": "R6.Infra",
+        "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj",
+        "packagesPath": "/Users/gabrielgomesbobrovlopes/.nuget/packages/",
+        "outputPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/gabrielgomesbobrovlopes/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityframeworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityframeworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityframeworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj",
+        "projectName": "R6.Core",
+        "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj",
+        "packagesPath": "/Users/gabrielgomesbobrovlopes/.nuget/packages/",
+        "outputPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/gabrielgomesbobrovlopes/.nuget/NuGet/NuGet.Config"
@@ -37,6 +354,126 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "mediatr": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/R6.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/R6.Tests.csproj",
+        "projectName": "R6.Tests",
+        "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/R6.Tests.csproj",
+        "packagesPath": "/Users/gabrielgomesbobrovlopes/.nuget/packages/",
+        "outputPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/gabrielgomesbobrovlopes/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/R6.API.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/R6.API.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/2-R6.Domain/R6.Domain.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/R6.Services.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/R6.Services.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/R6.Infra.csproj"
+              },
+              "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj": {
+                "projectPath": "/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/5-R6.Core/R6.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "EscNet": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "automapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "bogus": {
+              "target": "Package",
+              "version": "[34.0.1, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "fluentassertions": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "mediatr": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "moq": {
+              "target": "Package",
+              "version": "[4.17.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

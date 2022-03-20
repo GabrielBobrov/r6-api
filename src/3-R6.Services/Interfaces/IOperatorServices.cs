@@ -9,6 +9,6 @@ namespace R6.Services.Interfaces{
         Task<Optional<OperatorDto>> CreateAsync(OperatorDto operatorDto);
         Task<Optional<IList<OperatorDto>>> GetAllAsync();
         Task<Optional<OperatorDto>> GetAsync(long id);
-        Task<Optional<IList<OperatorDto>>> GetBySpeedAsync(SpeedType speed);
+        Task<Optional<IList<OperatorDto>>> SearchBySpeedAsync(SpeedType speed);
     }
 }

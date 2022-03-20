@@ -14,6 +14,7 @@ namespace R6.API.Controllers
 {
 
     [ApiController]
+    [Authorize]
     [Route("/api/v1/operators")]
     public class OperatorController : BaseController
     {
@@ -23,21 +24,20 @@ namespace R6.API.Controllers
 
         public OperatorController(
             IMapper mapper,
-            IOperatorService userService,
+            IOperatorService operatorService,
             INotificationHandler<DomainNotification> domainNotificationHandler)
             : base(domainNotificationHandler)
         {
             _mapper = mapper;
-            _operatorService = userService;
+            _operatorService = operatorService;
         }
 
 
         [HttpGet]
-        [Authorize]
         [Route("get-by-speed")]
         public async Task<IActionResult> GetBySpeedAsync([FromQuery] SpeedType speed)
         {
-            var operators = await _operatorService.GetBySpeedAsync(speed);
+            var operators = await _operatorService.SearchBySpeedAsync(speed);
 
             if (HasNotifications())
                 return Result();
@@ -51,7 +51,6 @@ namespace R6.API.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         [Route("{id}")]
         public async Task<IActionResult> GetAsync(long id)
         {
@@ -69,7 +68,6 @@ namespace R6.API.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         [Route("create")]
         public async Task<IActionResult> CreateAsync([FromBody] CreateOperatorViewModel operatorViewModel)
         {
@@ -88,7 +86,6 @@ namespace R6.API.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         [Route("get-all")]
         public async Task<IActionResult> GetAllAsync()
         {

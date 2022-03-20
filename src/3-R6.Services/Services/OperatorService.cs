@@ -85,7 +85,7 @@ namespace R6.Services.Services
             return new Optional<OperatorDto>(operatorDto);
         }
 
-        public async Task<Optional<IList<OperatorDto>>> GetBySpeedAsync(SpeedType speed)
+        public async Task<Optional<IList<OperatorDto>>> SearchBySpeedAsync(SpeedType speed)
         {
             Expression<Func<Operator, bool>> filter = op
                 => op.Speed == speed;

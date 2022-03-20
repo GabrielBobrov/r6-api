@@ -1,5 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+<ItemGroup>
+    <PackageReference Include="automapper" Version="11.0.1" />
+    <PackageReference Include="bogus" Version="34.0.1" />
+    <PackageReference Include="EscNet" Version="6.0.1" />
+    <PackageReference Include="fluentassertions" Version="6.5.1" />
+    <PackageReference Include="mediatr" Version="10.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="moq" Version="4.17.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\4-R6.Infra\R6.Infra.csproj" />
+    <ProjectReference Include="..\3-R6.Services\R6.Services.csproj" />
+    <ProjectReference Include="..\2-R6.Domain\R6.Domain.csproj" />
+    <ProjectReference Include="..\1-R6.API\R6.API.csproj" />
+    <ProjectReference Include="..\5-R6.Core\R6.Core.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
