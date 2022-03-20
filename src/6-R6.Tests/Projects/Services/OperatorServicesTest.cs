@@ -50,7 +50,7 @@ namespace R6.Tests.Projects.Services
 
         [Fact(DisplayName = "Search By Speed")]
         [Trait("Category", "Services")]
-        public async Task SearchByName_WhenAnyUserFound_ReturnsAListOfUserDTO()
+        public async Task SearchBySpeed_WhenAnyUserFound_ReturnsAListOfOperatorDto()
         {
             // Arrange
             var operatorsFound = OperatorFixture.CreateListValidOperators();
