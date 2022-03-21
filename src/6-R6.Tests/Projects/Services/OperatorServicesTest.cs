@@ -159,7 +159,7 @@ namespace R6.Tests.Projects.Services
 
         #endregion
 
-         #region Get
+        #region Get
 
         [Fact(DisplayName = "Get By Id")]
         [Trait("Category", "Services")]
