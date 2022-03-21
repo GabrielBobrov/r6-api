@@ -29,7 +29,7 @@ namespace R6.Tests.Fixtures
             return list;
         }
 
-        public static OperatorDto CreateValidUserDTO(bool newId = false)
+        public static OperatorDto CreateValidOperatorDto(bool newId = false)
         {
             return new OperatorDto
             {
@@ -41,7 +41,7 @@ namespace R6.Tests.Fixtures
             };
         }
 
-        public static OperatorDto CreateInvalidUserDTO()
+        public static OperatorDto CreateInvalidOperatorDto()
         {
             return new OperatorDto
             {

@@ -45,6 +45,77 @@ namespace R6.Tests.Projects.Services
                 rijndaelCryptography: _rijndaelCryptographyMock.Object,
                 mediator: _mediatorHandler.Object);
         }
+        #region Create
+        
+        [Fact(DisplayName = "Create Valid Operator")]
+        [Trait("Category", "Services")]
+        public async Task Create_WhenOperatorIsValid_ReturnsOperatorDto()
+        {
+            // Arrange
+            var operatorToCreate = OperatorFixture.CreateValidOperatorDto();
+
+            var operatorCreated = _mapper.Map<Operator>(operatorToCreate);
+
+            _operatorRepositoryMock.Setup(x => x.GetAsync(
+                It.IsAny<Expression<Func<Operator, bool>>>(),
+                It.IsAny<bool>()))
+            .ReturnsAsync(() => null);
+
+            _operatorRepositoryMock.Setup(x => x.CreateAsync(It.IsAny<Operator>()))
+                .ReturnsAsync(() => operatorCreated);
+
+            // Act
+            var result = await _sut.CreateAsync(operatorToCreate);
+
+            // Assert
+            result.Value.Should()
+                .BeEquivalentTo(_mapper.Map<OperatorDto>(operatorCreated));
+        }
+
+        [Fact(DisplayName = "Create When Operator Exists")]
+        [Trait("Category", "Services")]
+        public async Task Create_WhenOperatorExists_ReturnsEmptyOptional()
+        {
+            // Arrange
+            var operatorToCreate = OperatorFixture.CreateValidOperatorDto();
+            var operatorExists = OperatorFixture.CreateValidOperator();
+
+            _operatorRepositoryMock.Setup(x => x.GetAsync(
+                It.IsAny<Expression<Func<Operator, bool>>>(),
+                It.IsAny<bool>()))
+            .ReturnsAsync(() => operatorExists);
+
+            // Act
+            var result = await _sut.CreateAsync(operatorToCreate);
+
+
+            // Act
+            result.HasValue.Should()
+                .BeFalse();
+        }
+
+        [Fact(DisplayName = "Create When Operator is Invalid")]
+        [Trait("Category", "Services")]
+        public async Task Create_WhenOperatorIsInvalid_ReturnsEmptyOptional()
+        {
+            // Arrange
+            var operatorToCreate = OperatorFixture.CreateInvalidOperatorDto();
+
+            _operatorRepositoryMock.Setup(x => x.GetAsync(
+                It.IsAny<Expression<Func<Operator, bool>>>(),
+                It.IsAny<bool>()))
+            .ReturnsAsync(() => null);
+
+            // Act
+            var result = await _sut.CreateAsync(operatorToCreate);
+
+
+            // Act
+            result.HasValue.Should()
+                .BeFalse();
+        }
+
+        #endregion
 
         #region Search
 
