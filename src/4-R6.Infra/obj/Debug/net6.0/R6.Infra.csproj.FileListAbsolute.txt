@@ -1,7 +1,6 @@
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/bin/Debug/net6.0/R6.Infra.deps.json
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/bin/Debug/net6.0/R6.Infra.runtimeconfig.json
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/bin/Debug/net6.0/R6.Infra.dll
-/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/bin/Debug/net6.0/ref/R6.Infra.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/bin/Debug/net6.0/R6.Infra.pdb
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/bin/Debug/net6.0/R6.Core.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/bin/Debug/net6.0/R6.Domain.dll
@@ -17,3 +16,4 @@
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/obj/Debug/net6.0/ref/R6.Infra.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/obj/Debug/net6.0/R6.Infra.pdb
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/obj/Debug/net6.0/R6.Infra.genruntimeconfig.cache
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/4-R6.Infra/obj/Debug/net6.0/refint/R6.Infra.dll

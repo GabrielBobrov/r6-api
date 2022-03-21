@@ -158,5 +158,81 @@ namespace R6.Tests.Projects.Services
         }
 
         #endregion
+
+         #region Get
+
+        [Fact(DisplayName = "Get By Id")]
+        [Trait("Category", "Services")]
+        public async Task GetById_WhenOperatorExists_ReturnsOperatorDto()
+        {
+            // Arrange
+            var operatorId = new Randomizer().Int(0, 1000);
+            var operatorFound = OperatorFixture.CreateValidOperator();
+
+            _operatorRepositoryMock.Setup(x => x.GetAsync(operatorId))
+            .ReturnsAsync(() => operatorFound);
+
+            // Act
+            var result = await _sut.GetAsync(operatorId);
+
+            // Assert
+            result.Value.Should()
+                .BeEquivalentTo(_mapper.Map<OperatorDto>(operatorFound));
+        }
+
+        [Fact(DisplayName = "Get By Id When Operator Not Exists")]
+        [Trait("Category", "Services")]
+        public async Task GetById_WhenOperatorNotExists_ReturnsEmptyOptional()
+        {
+            // Arrange
+            var operatorId = new Randomizer().Int(0, 1000);
+
+            _operatorRepositoryMock.Setup(x => x.GetAsync(operatorId))
+                .ReturnsAsync(() => null);
+
+            // Act
+            var result = await _sut.GetAsync(operatorId);
+
+            // Assert
+            result.Value.Should()
+                .BeNull();
+        }
+
+        [Fact(DisplayName = "Get All Operators")]
+        [Trait("Category", "Services")]
+        public async Task GetAllOperators_WhenOperatorsExists_ReturnsAListOfOperatorDto()
+        {
+            // Arrange
+            var OperatorsFound = OperatorFixture.CreateListValidOperators();
+
+            _operatorRepositoryMock.Setup(x => x.GetAllAsync())
+                .ReturnsAsync(() => OperatorsFound);
+
+            // Act
+            var result = await _sut.GetAllAsync();
+
+            // Assert
+            result.Value.Should()
+                .BeEquivalentTo(_mapper.Map<List<OperatorDto>>(OperatorsFound));
+        }
+
+        [Fact(DisplayName = "Get All Operators When None Operator Found")]
+        [Trait("Category", "Services")]
+        public async Task GetAllOperators_WhenNoneOperatorFound_ReturnsEmptyList()
+        {
+            // Arrange
+
+            _operatorRepositoryMock.Setup(x => x.GetAllAsync())
+                .ReturnsAsync(() => null);
+
+            // Act
+            var result = await _sut.GetAllAsync();
+
+            // Assert
+            result.Value.Should()
+                .BeEmpty();
+        }
+
+        #endregion
     }
 }

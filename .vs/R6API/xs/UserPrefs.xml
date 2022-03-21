@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{A2B7D935-BFCC-47EC-A1F1-067DCD7F5C04}|Default">
+  <MonoDevelop.Ide.ItemProperties.src.R6.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/6-R6.Tests/Projects/Services/OperatorServicesTest.cs">
+    <Files>
+      <File FileName="src/6-R6.Tests/Projects/Services/OperatorServicesTest.cs" Line="108" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="R6API" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="R6.Infra" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="R6.Tests" expanded="True">
+                <Node name="Configuration" expanded="True" />
+                <Node name="Fixtures" expanded="True" />
+                <Node name="Projects" expanded="True">
+                  <Node name="Services" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="R6API" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

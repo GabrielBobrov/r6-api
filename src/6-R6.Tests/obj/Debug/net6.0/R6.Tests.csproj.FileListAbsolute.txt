@@ -16,7 +16,6 @@
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/bin/Debug/net6.0/R6.Tests.deps.json
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/bin/Debug/net6.0/R6.Tests.runtimeconfig.json
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/bin/Debug/net6.0/R6.Tests.dll
-/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/bin/Debug/net6.0/ref/R6.Tests.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/bin/Debug/net6.0/R6.Tests.pdb
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/bin/Debug/net6.0/AutoMapper.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
@@ -148,3 +147,4 @@
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/obj/Debug/net6.0/ref/R6.Tests.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/obj/Debug/net6.0/R6.Tests.pdb
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/obj/Debug/net6.0/R6.Tests.genruntimeconfig.cache
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/6-R6.Tests/obj/Debug/net6.0/refint/R6.Tests.dll
