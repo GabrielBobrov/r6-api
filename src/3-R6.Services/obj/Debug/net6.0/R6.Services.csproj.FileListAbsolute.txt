@@ -14,6 +14,6 @@
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/Debug/net6.0/R6.Services.csproj.CoreCompileInputs.cache
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/Debug/net6.0/R6.Services.csproj.CopyComplete
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/Debug/net6.0/R6.Services.dll
-/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/Debug/net6.0/ref/R6.Services.dll
-/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/Debug/net6.0/R6.Services.pdb
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/Debug/net6.0/refint/R6.Services.dll
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/Debug/net6.0/R6.Services.pdb
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/3-R6.Services/obj/Debug/net6.0/ref/R6.Services.dll

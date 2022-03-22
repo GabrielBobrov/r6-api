@@ -54,7 +54,7 @@
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/scopedcss/bundle/R6.API.styles.css
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/R6.API.csproj.CopyComplete
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/R6.API.dll
-/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/ref/R6.API.dll
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/refint/R6.API.dll
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/R6.API.pdb
 /Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/R6.API.genruntimeconfig.cache
-/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/refint/R6.API.dll
+/Users/gabrielgomesbobrovlopes/Desktop/dev/VisualStudio/R6API/src/1-R6.API/obj/Debug/net6.0/ref/R6.API.dll
