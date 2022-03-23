@@ -10,6 +10,9 @@ namespace R6.Infra.Configuration
             mapper.MapEnum<DificultType>();
             mapper.MapEnum<SpeedType>();
             mapper.MapEnum<ArmorType>();
+            mapper.MapEnum<PrimaryGunType>();
+            mapper.MapEnum<SecondaryGunType>();
+            
         }
     }
 }

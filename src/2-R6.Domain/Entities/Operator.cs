@@ -11,8 +11,7 @@ namespace R6.Domain.Entities
         public DificultType Dificult { get; private set; }
         public SpeedType Speed { get; private set; }
         public ArmorType Armor { get; private set; }
-
-
+        public Gun Gun { get; private set; }
         //EF
         protected Operator(){}
 

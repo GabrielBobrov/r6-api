@@ -18,6 +18,8 @@ namespace R6.Infra.Configuration
             modelBuilder.HasPostgresEnum<DificultType>();
             modelBuilder.HasPostgresEnum<SpeedType>();
             modelBuilder.HasPostgresEnum<ArmorType>();
+            modelBuilder.HasPostgresEnum<PrimaryGunType>();
+            modelBuilder.HasPostgresEnum<SecondaryGunType>();
 
             return modelBuilder;
         }
