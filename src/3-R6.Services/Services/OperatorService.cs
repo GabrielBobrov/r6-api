@@ -12,7 +12,7 @@ using R6.Core.Validations.Message;
 using R6.Domain.Entities;
 using R6.Infra.Interfaces;
 using R6.Services.DTO;
-using R6.Services.Interfaces;
+using R6.Services.Excpetion;
 using R6.Services.Interfaces;
 
 namespace R6.Services.Services
@@ -27,7 +27,7 @@ namespace R6.Services.Services
         public OperatorService(
             IMapper mapper,
             IOperatorRepository operatorRepository,
-            IRijndaelCryptography rijndaelCryptography, 
+            IRijndaelCryptography rijndaelCryptography,
             IMediatorHandler mediator)
         {
             _mapper = mapper;
@@ -38,7 +38,7 @@ namespace R6.Services.Services
 
         public async Task<Optional<OperatorDto>> CreateAsync(OperatorDto operatorDto)
         {
-            Expression<Func<Operator, bool>> filter = op 
+            Expression<Func<Operator, bool>> filter = op
                 => op.Name.ToLower() == operatorDto.Name.ToLower();
 
             var operatorExists = await _operatorRepository.GetAsync(filter);
@@ -49,7 +49,7 @@ namespace R6.Services.Services
                     ErrorMessages.OperatorAlreadyExists,
                     DomainNotificationType.OperatorAlreadyExists));
 
-                return new Optional<OperatorDto>();
+                throw new AppException("Operador já existe");
             }
 
             var op = _mapper.Map<Operator>(operatorDto);
@@ -61,7 +61,7 @@ namespace R6.Services.Services
                    ErrorMessages.UserInvalid(op.ErrorsToString()),
                    DomainNotificationType.UserInvalid));
 
-                return new Optional<OperatorDto>();
+                throw new AppException("Campos inválidos: ", op.ErrorsToString());
             }
 
             var userCreated = await _operatorRepository.CreateAsync(op);
@@ -92,7 +92,7 @@ namespace R6.Services.Services
 
             var operators = await _operatorRepository.SearchAsync(filter);
             var operatorsDto = _mapper.Map<IList<OperatorDto>>(operators);
-            
+
             return new Optional<IList<OperatorDto>>(operatorsDto);
         }
     }

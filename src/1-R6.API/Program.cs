@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using R6.API.Excpetion;
 using R6.API.Token;
 using R6.API.ViewModels;
 using R6.Core.Communication.Handlers;
@@ -34,95 +35,95 @@ builder.Services.AddSwaggerGen();
 #region Jwt
 
 
-    var secretKey = builder.Configuration["Jwt:Key"];
+var secretKey = builder.Configuration["Jwt:Key"];
 
-    builder.Services.AddAuthentication(x =>
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(x =>
+{
+    x.RequireHttpsMetadata = false;
+    x.SaveToken = true;
+    x.TokenValidationParameters = new TokenValidationParameters
     {
-        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    })
-    .AddJwtBearer(x =>
-    {
-        x.RequireHttpsMetadata = false;
-        x.SaveToken = true;
-        x.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey)),
-            ValidateIssuer = false,
-            ValidateAudience = false
-        };
-    });
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey)),
+        ValidateIssuer = false,
+        ValidateAudience = false
+    };
+});
 
 #endregion
 
 #region AutoMapper
 
-    var autoMapperConfig = new MapperConfiguration(cfg =>
-    {
-        cfg.CreateMap<Operator, OperatorDto>().ReverseMap();
-        cfg.CreateMap<CreateOperatorViewModel, OperatorDto>().ReverseMap();
-    });
+var autoMapperConfig = new MapperConfiguration(cfg =>
+{
+    cfg.CreateMap<Operator, OperatorDto>().ReverseMap();
+    cfg.CreateMap<CreateOperatorViewModel, OperatorDto>().ReverseMap();
+});
 
-            builder.Services.AddSingleton(autoMapperConfig.CreateMapper());
+builder.Services.AddSingleton(autoMapperConfig.CreateMapper());
 
 #endregion
 
 #region Services
-    builder.Services.AddSingleton(d => builder.Configuration);
-    builder.Services.AddScoped<IOperatorService, OperatorService>();
-    builder.Services.AddScoped<IOperatorRepository, OperatorRepository>();
+builder.Services.AddSingleton(d => builder.Configuration);
+builder.Services.AddScoped<IOperatorService, OperatorService>();
+builder.Services.AddScoped<IOperatorRepository, OperatorRepository>();
 #endregion
 
 #region Database
-    builder.Services.AddDbContext<R6Context>(options => options.UseNpgsql("ConnectionStrings:R6APIPostgreSQL"));
+builder.Services.AddDbContext<R6Context>(options => options.UseNpgsql("ConnectionStrings:R6APIPostgreSQL"));
 #endregion
 
 #region Mediator
 
-    builder.Services.AddMediatR(typeof(Program));
-    builder.Services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
-    builder.Services.AddScoped<IMediatorHandler, MediatorHandler>();
+builder.Services.AddMediatR(typeof(Program));
+builder.Services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
+builder.Services.AddScoped<IMediatorHandler, MediatorHandler>();
 
 #endregion
 
 #region Cryptography
 
-    builder.Services.AddRijndaelCryptography(builder.Configuration["Cryptography:Key"]);
-    
+builder.Services.AddRijndaelCryptography(builder.Configuration["Cryptography:Key"]);
+
 #endregion
 
 #region Token
 
-    builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
+builder.Services.AddScoped<ITokenGenerator, TokenGenerator>();
 
 #endregion
 
 #region Swagger
 
-            builder.Services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Title = "R6 API",
-                    Version = "v1",
-                    Description = "API Simulando funcionamento do jogo rainbow six siege.",
-                    Contact = new OpenApiContact
-                    {
-                        Name = "Gabriel Bobrov",
-                        Email = "gabrielbobrov@outlook.com.br",
-                        Url = new Uri("https://github.com/GabrielBobrov")
-                    },
-                });
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "R6 API",
+        Version = "v1",
+        Description = "API Simulando funcionamento do jogo rainbow six siege.",
+        Contact = new OpenApiContact
+        {
+            Name = "Gabriel Bobrov",
+            Email = "gabrielbobrov@outlook.com.br",
+            Url = new Uri("https://github.com/GabrielBobrov")
+        },
+    });
 
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    In = ParameterLocation.Header,
-                    Description = "Por favor utilize Bearer <TOKEN>",
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.ApiKey
-                });
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Por favor utilize Bearer <TOKEN>",
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey
+    });
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement {
                 {
                     new OpenApiSecurityScheme
                     {
@@ -134,8 +135,8 @@ builder.Services.AddSwaggerGen();
                     },
                     new string[] { }
                 }
-                });
-            });
+    });
+});
 
 #endregion
 
@@ -149,6 +150,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();
