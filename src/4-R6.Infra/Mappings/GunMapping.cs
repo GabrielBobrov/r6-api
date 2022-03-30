@@ -26,10 +26,13 @@ namespace R6.Infra.Mappings
                 .HasForeignKey<Gun>(f => f.operatorId);
 
             builder.Property(x => x.PrimaryGunType)
-                .HasColumnName("PrimaryGunType");
+                .HasColumnName("PrimaryGunType")
+                .IsRequired(false);
 
             builder.Property(x => x.SecondaryGunType)
-                .HasColumnName("SecondaryGunType");
+                .HasColumnName("SecondaryGunType")
+                .IsRequired(false);
+
         }
     }
 }

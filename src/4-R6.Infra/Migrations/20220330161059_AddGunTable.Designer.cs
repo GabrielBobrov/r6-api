@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using R6.Core.Enums;
@@ -12,9 +13,10 @@ using R6.Infra.Context;
 namespace R6.Infra.Migrations
 {
     [DbContext(typeof(R6Context))]
-    partial class R6ContextModelSnapshot : ModelSnapshot
+    [Migration("20220330161059_AddGunTable")]
+    partial class AddGunTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

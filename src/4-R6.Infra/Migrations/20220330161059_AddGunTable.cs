@@ -27,8 +27,8 @@ namespace R6.Infra.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    PrimaryGunType = table.Column<PrimaryGunType>(type: "primary_gun_type", nullable: false),
-                    SecondaryGunType = table.Column<SecondaryGunType>(type: "secondary_gun_type", nullable: false),
+                    PrimaryGunType = table.Column<PrimaryGunType>(type: "primary_gun_type", nullable: true),
+                    SecondaryGunType = table.Column<SecondaryGunType>(type: "secondary_gun_type", nullable: true),
                     operatorId = table.Column<long>(type: "BIGINT", nullable: false)
                 },
                 constraints: table =>

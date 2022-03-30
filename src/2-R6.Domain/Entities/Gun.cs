@@ -9,8 +9,8 @@ namespace R6.Domain.Entities
 
         //Propriedades
         public string Name { get; private set; }
-        public PrimaryGunType PrimaryGunType { get; private set; }
-        public SecondaryGunType SecondaryGunType { get; private set; }
+        public PrimaryGunType? PrimaryGunType { get; private set; }
+        public SecondaryGunType? SecondaryGunType { get; private set; }
         public long operatorId { get; private set; }
         //EF Relations
         public Operator Operator { get; private set; }
