@@ -61,7 +61,7 @@ namespace R6.Services.Services
                    ErrorMessages.UserInvalid(op.ErrorsToString()),
                    DomainNotificationType.UserInvalid));
 
-                throw new AppException("Campos inválidos: ", op.ErrorsToString());
+                return new Optional<OperatorDto>();
             }
 
             var userCreated = await _operatorRepository.CreateAsync(op);

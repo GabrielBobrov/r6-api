@@ -24,23 +24,12 @@ namespace R6.API.Excpetion
             {
                 var response = context.Response;
                 response.ContentType = "application/json";
-
-                switch (error)
+                response.StatusCode = error switch
                 {
-                    case AppException e:
-                        // custom application error
-                        response.StatusCode = (int)HttpStatusCode.BadRequest;
-                        break;
-                    case KeyNotFoundException e:
-                        // not found error
-                        response.StatusCode = (int)HttpStatusCode.NotFound;
-                        break;
-                    default:
-                        // unhandled error
-                        response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                        break;
-                }
-
+                    AppException => (int)HttpStatusCode.BadRequest,// custom application error
+                    KeyNotFoundException => (int)HttpStatusCode.NotFound,// not found error
+                    _ => (int)HttpStatusCode.InternalServerError,// unhandled error
+                };
                 var result = JsonSerializer.Serialize(new { message = error?.Message });
                 await response.WriteAsync(result);
             }
