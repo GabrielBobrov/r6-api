@@ -16,7 +16,7 @@ namespace R6.API.Controllers
         protected BaseController(
            INotificationHandler<DomainNotification> domainNotificationHandler)
         {
-            _domainNotificationHandler = domainNotificationHandler as DomainNotificationHandler;
+            _domainNotificationHandler = (DomainNotificationHandler)domainNotificationHandler;
         }
 
         protected bool HasNotifications()
