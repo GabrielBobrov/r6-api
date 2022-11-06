@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using R6.Core.Intefaces;
-using R6.Core.Notificacoes;
+using R6.Core.Notifications;
 
 namespace R6.API.Controllers;
 
@@ -46,7 +46,7 @@ public abstract class MainController : ControllerBase
         return BadRequest(new
         {
             success = false,
-            errors = _notificator.GetNotifications().Select(n => n.Mensagem)
+            errors = _notificator.GetNotifications().Select(n => n.Message)
         });
     }
 

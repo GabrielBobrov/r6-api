@@ -2,7 +2,7 @@ using System.Net;
 using System.Text.Json;
 using R6.Services.Excpetion;
 
-namespace R6.API.Excpetion
+namespace R6.API.Exceptions
 {
 
     public class ErrorHandlerMiddleware

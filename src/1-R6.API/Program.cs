@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using R6.API.Excpetion;
+using R6.API.Identity.Configuration;
 using R6.API.Token;
 using R6.API.ViewModels;
 using R6.Core.Communication.Handlers;
@@ -20,6 +20,11 @@ using R6.Infra.Repositories;
 using R6.Services.DTO;
 using R6.Services.Interfaces;
 using R6.Services.Services;
+using R6.API.Exceptions;
+using R6.Api.Extensions;
+using R6.Core.Intefaces;
+using DevIO.Business.Notificacoes;
+using R6.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,32 +35,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-
-#region Jwt
-
-
-var secretKey = builder.Configuration["Jwt:Key"];
-
-builder.Services.AddAuthentication(x =>
-{
-    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(x =>
-{
-    x.RequireHttpsMetadata = false;
-    x.SaveToken = true;
-    x.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey)),
-        ValidateIssuer = false,
-        ValidateAudience = false
-    };
-});
-
+#region Identity
+builder.Services.AddIdentityConfiguration(builder.Configuration);
 #endregion
+
+
 
 #region AutoMapper
 
@@ -73,6 +57,9 @@ builder.Services.AddSingleton(autoMapperConfig.CreateMapper());
 builder.Services.AddSingleton(d => builder.Configuration);
 builder.Services.AddScoped<IOperatorService, OperatorService>();
 builder.Services.AddScoped<IOperatorRepository, OperatorRepository>();
+builder.Services.AddScoped<IUser, AspNetUser>();
+builder.Services.AddScoped<INotificator, Notificator>();
+
 #endregion
 
 #region Database
@@ -154,6 +141,7 @@ app.UseHttpsRedirection();
 app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.UseAuthentication();
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthorization();
 
 app.MapControllers();
