@@ -34,7 +34,7 @@ namespace R6.API.Controllers
         }
 
         [HttpPost("new-account")]
-        public async Task<ActionResult> Registrar(RegisterUserViewModel registerUser)
+        public async Task<ActionResult> Register(RegisterUserViewModel registerUser)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
